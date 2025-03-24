@@ -42,7 +42,7 @@
 
 ```bash
 # 1. Clonar el repositorio
-
+git clone https://github.com/DovaDev/laravel-amplifica.git
 cd laravel-amplifica
 
 # 2. Instalar dependencias backend
@@ -146,5 +146,35 @@ laravel-amplifica/
 │   └── App.jsx
 └── public/
 ```
+
+## ⚙️ Configuración del entorno `.env`
+
+Copia el archivo `.env.example` y renómbralo a `.env`. Luego modifica los siguientes valores:
+
+```env
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY= (se genera con `php artisan key:generate`)
+APP_DEBUG=true
+APP_URL=http://127.0.0.1:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=amplifica_db
+DB_USERNAME=root
+DB_PASSWORD=
+
+SESSION_DRIVER=database
+SESSION_DOMAIN=127.0.0.1
+SANCTUM_STATEFUL_DOMAINS=127.0.0.1:8000
+
+# Credenciales API Amplifica
+AMPLIFICA_USER=pablo.rodriguez96k@ejemplo.com
+AMPLIFICA_PASS=password
+
+# Otros
+CACHE_STORE=database
+QUEUE_CONNECTION=database
 
 ---
